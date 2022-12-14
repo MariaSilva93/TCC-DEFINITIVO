@@ -1,0 +1,22 @@
+<?php
+require_once 'functions.php';
+// constantes com as credenciais de acesso ao banco MySQL
+define('DB_HOST', 'localhost');
+define('DB_USER', 'root');
+define('DB_PASS', '35178');
+define('DB_NAME', 'boaforma');
+
+if(!session_id()){ 
+    session_start(); 
+ } 
+
+$conexao = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME) or die ('Não foi possivel conectar');
+
+// habilita todas as exibições de erros
+ini_set('display_errors', true);
+
+error_reporting(E_ERROR);
+date_default_timezone_set('America/Sao_Paulo');
+
+
+

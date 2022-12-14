@@ -1,0 +1,15 @@
+create database cadastroacademia;
+use cadastroacademia;
+
+CREATE TABLE user(
+Nome varchar(500) not null,
+Sobrenome varchar(500) not null,
+email varchar(1000) not null,
+Celular int not null,
+Data_nascimento varchar(100) not null,
+CPF varchar(100) unique,
+Senha varchar(100) not null,
+primary key (CPF)
+);
+
+drop database cadastroacademia;
